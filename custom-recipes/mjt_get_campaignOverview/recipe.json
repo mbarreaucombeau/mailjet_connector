@@ -1,0 +1,47 @@
+// This file is the descriptor for the Custom code recipe MAILJET_compute_list_name
+{
+    // Meta data for display purposes
+    "meta" : {
+        "label" : "Get Campaign Overview",
+        "author" : "Magali Barreau-Combeau",
+        "tags" : ["mailjet","campaign Overview", "dev"]
+    },
+
+    "kind" : "PYTHON",
+
+    // Inputs and outputs are defined by roles. In the recipe's I/O tab, the user can associate one
+    // or more dataset to each input and output role.
+
+    // The "arity" field indicates whether the user can associate several datasets to the role ('NARY')
+    // or at most one ('UNARY'). The "required" field indicates whether the user is allowed to
+    // associate no dataset with the role.
+
+    "outputRoles" : [
+        {
+            "name": "campaign",
+            "label": "campaign",
+            "description": "Get mailjet Campaigns from Mailjet API. Refer to https://dev.mailjet.com/email-api/v3/campaign/",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+
+    // The field "params" holds a list of all the params
+    // for wich the user will be prompted for values in the Settings tab of the recipe.
+
+    // The available parameter types are:
+    // STRING, INT, DOUBLE, BOOLEAN, PASSWORD, SELECT, MAP, COLUMN, COLUMNS, TEXTAREA
+
+    "params": [
+        {
+            "name": "start_date",
+            "label" : "start Date",
+            "type": "STRING",
+            "description":"Start Date in format yyyy-mm-dd",
+            "mandatory" : true
+        }
+
+      ]
+
+}

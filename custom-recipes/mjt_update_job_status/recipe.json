@@ -1,0 +1,119 @@
+// This file is the descriptor for the Custom code recipe MAILJET_compute_list_name
+{
+    // Meta data for display purposes
+    "meta" : {
+        "label" : "Update JobStatus",
+        "author" : "Me",
+        "tags" : ["Mailjet", "ContactList", "Job Status"]
+    },
+
+    "kind" : "PYTHON",
+
+    // Inputs and outputs are defined by roles. In the recipe's I/O tab, the user can associate one
+    // or more dataset to each input and output role.
+
+    // The "arity" field indicates whether the user can associate several datasets to the role ('NARY')
+    // or at most one ('UNARY'). The "required" field indicates whether the user is allowed to
+    // associate no dataset with the role.
+
+    "inputRoles" : [
+        {
+            "name": "ContactList_JobStatus",
+            "label": "Job Status to check",
+            "description": "List of Job Status with at least one JobID column",
+            "arity": "UNARY",
+            "required": true,
+            "acceptsDataset": true
+        }
+    ],
+
+    "outputRoles" : [
+        {
+            "name": "ContactList_JobStatus",
+            "label": "Job Status [Contact List Load]",
+            "description": "All status of the job launched to load data into the contact list",
+            "arity": "UNARY",
+            "required": false,
+            "acceptsDataset": true
+        }
+    ],
+
+    // The field "params" holds a list of all the params
+    // for wich the user will be prompted for values in the Settings tab of the recipe.
+
+    // The available parameter types are:
+    // STRING, INT, DOUBLE, BOOLEAN, PASSWORD, SELECT, MAP, COLUMN, COLUMNS, TEXTAREA
+
+    "params": [
+       
+        
+        {
+            "name": "saName",
+        
+            "type": "SELECT",
+            "selectChoices": 
+          [
+              
+             {"value": "Canada - US - Latin Am",
+              "label": "Canada - US - Latin Am"
+             },
+             {"value": "Cloud products",
+             "label": "Cloud products"
+             },
+             {"value": "Customers information only",
+             "label": "Customers information only"
+             },
+            {"value": "Dedicated servers",
+             "label": "Dedicated servers"
+            },
+            {"value": "DLP program",
+             "label": "DLP program" 
+            },
+             {"value": "Events", 
+              "label": "Events"
+             },
+              {"value": "Fr- Account",
+             "label": "Fr- Account"
+              },
+  
+                {"value": "Interne",
+                "label": "Interne"
+                 },
+                {"value": "IT- ACCOUNT",
+                "label": "IT- ACCOUNT"
+                 },
+                {"value": "Notifications",
+                "label": "Notifications"
+                 },
+                {"value": "OVH Newsletter",
+                "label": "OVH Newsletter"
+                 },
+                {"value": "Partners",
+                "label": "Partners"
+                 },
+                {"value": "SMTP",
+                "label": "SMTP"
+                 },
+                {"value": "Summit2015",
+                "label": "Summit2015"
+                 },
+                {"value": "Telecom",
+                "label": "Telecom"
+                 },
+                {"value": "Test API",
+                "label": "Test API"
+                 },
+                {"value": "Web (Domains + hosting)",
+                "label": "Web (Domains + hosting)"
+                 },
+                {"value": "WebHosting (old)",
+                "label": "WebHosting (old)"
+                }
+            ]
+        }
+
+      
+    ]
+
+
+}
