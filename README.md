@@ -3,7 +3,7 @@ mailjet plugin for dataiku platform, written in python
 
 # Installation
 Install it using Dataiku plugin setup view
-Modify the file MAILJET_CONNECTOR\python-lib : add one line per mailjet sub-account with the correct key/secret information
+Modify the file MAILJET_CONNECTOR\python-lib\mailjet_accounts.csv : add one line per mailjet sub-account with the correct key/secret information
 
 Functions available :
 ## Get Campaign
